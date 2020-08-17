@@ -30,7 +30,7 @@
 - Horizontal line
 - Screen reset (multiplatform)
 
-### 1.3: Validate char and int inputs
+### 1.3: Validate char and int inputs --DONE Chars--
 - Generic inputs
 - Debug out
 

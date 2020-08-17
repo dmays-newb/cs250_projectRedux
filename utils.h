@@ -11,4 +11,12 @@ int WhichPlayer(int turns);
 
 void Debug2File(int var, int line);
 
+void AnyKey();
+
+void Reset();
+
+void InvalidEntry();
+
+void PrintNumRow(int n);
+
 #endif // 

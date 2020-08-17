@@ -1,3 +1,4 @@
+
 #ifndef PLAYER_H
 #define PLAYER_H
 
@@ -7,7 +8,10 @@
 
         public:
             // Player();
-            void PrintPlaceholder() { std::cout << placeholder ; }
+            // void PrintPlaceholder() { std::cout << placeholder ; }
     };
+
+
+    char ValidateChar(bool ThisIsPayment);
 
 #endif // !PLAYER_H

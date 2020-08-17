@@ -30,7 +30,7 @@ void PrintLine(int n) {
 
 void PrintLine(std::ostream &file, int n) {
     file << std::setw(n) << std::setfill('-');
-    //file << std::setw(0) << std::setfill(' ');
+    file << std::setw(0) << std::setfill(' ');
 }
 
 int WhichPlayer(int turns) {
@@ -56,4 +56,31 @@ void Debug2File(int var, int line) {
     out << "----End----" << '\n' << std::endl;
 
 
+}
+
+void AnyKey() {
+    char any;
+    std::cout << "Press any key and Return to continue.";
+    std::cin >> any;
+}
+
+void Reset() {
+    #ifdef LINUX
+        system("clear");
+    #else
+        system("CLS");
+    #endif
+}
+
+void InvalidEntry() {
+    std::cout << "Invalid Entry" << std::endl;
+}
+
+void PrintNumRow(int n) {       
+    std::cout << ' ';
+    for (int k = 0; k <= n; k++) {
+        std::cout << std::right << std::setw(3)
+            << std::setfill(' ') << k;
+    }
+    std::cout << '\n' << std::endl;
 }

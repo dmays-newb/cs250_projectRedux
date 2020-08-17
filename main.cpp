@@ -29,8 +29,10 @@ int main(int argc, char *argv[]) {
     Player p1x;
     Player p2y;
 
-    Debug2File(turns, __LINE__);
-    GameLoop(status, board, p1x, p2y);
+    // Debug2File(turns, __LINE__);
+    // GameLoop(status, board, p1x, p2y);
+
+    char c = ValidateChar(0);
 
     return 0;
 }

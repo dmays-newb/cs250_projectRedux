@@ -42,3 +42,24 @@ void GameStatus::WinningStatement() {
         << std::endl;
 
 }
+
+int ValidAction(char c) {
+    int i = -1;
+    while (i <= 0 || i >= 4) {
+        std::cout << "Player " << c << " Select Move:"
+        << "\t1 (Build)\t2 (Trade)\t3 (Pass)" << std::endl;
+        std::cin >> i;
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(100, '\n');
+            std::cout << "Try again" << std::endl;
+            i = -1;
+        }
+        else if (i <= 0 || i >= 4) {
+            std::cin.clear();
+            std::cin.ignore(100, '\n');
+            std::cout << "Try again" << std::endl;
+        }
+    }
+    return i;
+}
