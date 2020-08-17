@@ -22,3 +22,10 @@ GameStatus::GameStatus(int &p1, int &p2, int &t, int rc[]) {
     DebugStatus(*turns, __LINE__);
     DebugStatus(resourceChanges[0], __LINE__);
 }
+
+bool GameStatus::GameOver() {
+    if (*player1xScore >= 6 || *player2yScore >= 6)
+        return true;
+    else 
+        return false;
+}

@@ -16,6 +16,10 @@
 ### 1.0.2: Create dummy player resource data (just in main or gamestatus)
 - for testing resource updates
 
+
+### 1.0.3 **Create basic (dummy class objects for all)**
+- test to make sure they work
+
 ### 1.1: Loop through game until score is 6
 - Add mock inputs for score
 - Debug output for score and turns

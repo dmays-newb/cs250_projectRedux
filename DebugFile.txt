@@ -1,0 +1,12 @@
+Mon Aug 17 11:46:50 2020
+Begin
+ Line: 32
+Variable = 0
+End
+
+Mon Aug 17 11:47:56 2020
+----Begin----
+Line: 32
+Variable = 0
+----End----
+

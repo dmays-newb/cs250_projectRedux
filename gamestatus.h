@@ -24,6 +24,7 @@ class GameStatus {
         void PrintScore1x() { std::cout << *player1xScore ; }
         void PrintScore2y() { std::cout << *player2yScore ; }
         void PrintTurns() { std::cout << *turns ; }
+        bool GameOver();
 };
 
 #endif // !GAMESTATUS_H

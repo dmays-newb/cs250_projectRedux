@@ -7,4 +7,8 @@ void DebugOut(int var, int line);
 
 void PrintLine(int n);
 
+int WhichPlayer(int turns);
+
+void Debug2File(int var, int line);
+
 #endif // 
