@@ -14,6 +14,7 @@ class GameStatus {
     public:
         GameStatus(int &, int &, int &, int []);
         void DebugStatus(int, int);
+        void SetTurns(int n) { *turns = n ;}
         int GetTurns() {return *turns ;}
         int GetP1Score() {return *player1xScore ;}
         int GetP2Score() {return *player2yScore ;}
@@ -25,6 +26,7 @@ class GameStatus {
         void PrintScore2y() { std::cout << *player2yScore ; }
         void PrintTurns() { std::cout << *turns ; }
         bool GameOver();
+        void WinningStatement();
 };
 
 #endif // !GAMESTATUS_H

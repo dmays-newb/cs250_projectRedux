@@ -29,3 +29,16 @@ bool GameStatus::GameOver() {
     else 
         return false;
 }
+
+void GameStatus::WinningStatement() {
+    int winner;
+    winner = WhichPlayer(*turns);
+
+    std::cout << "Player number " << winner
+        << " has won the game!"
+        << '\n' << "Player1 Score: " << *player1xScore
+        << '\n' << "Player2 Score: " <<  *player2yScore
+        << '\n' << "Turns: " << *turns
+        << std::endl;
+
+}

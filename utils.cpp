@@ -34,7 +34,7 @@ void PrintLine(std::ostream &file, int n) {
 }
 
 int WhichPlayer(int turns) {
-    if (turns % 2 == 0)
+    if (turns % 2 != 0)
         return 1;
     else 
         return 2;

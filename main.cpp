@@ -14,7 +14,7 @@
 
 int main(int argc, char *argv[]) {
     srand(time(NULL));
-    int turns = 0;
+    int turns = 1;
     int player1xScore = 0;
     int player2yScore = 0;
     int resourceChanges[6] = {-3, 0, 1, 2, 3, 0};
@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
 //official main
 int main() {
     srand(time(NULL));
-    int turns = 0;
+    int turns = 1;
     int player1xScore = 0;
     int player2yScore = 0;
     int resourceChanges[6] = {0};
