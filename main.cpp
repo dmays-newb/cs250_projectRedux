@@ -1,25 +1,22 @@
 #include <iostream>
-
-
-int turns = 0;
-int scores[2] = {0};
-int resourceChanges[6] = {0};
+#include "utils.h"
+#include "gamestatus.h"
 
 
 #ifdef DEBUG_MAIN
-int ConvertToInt(char* c) {
-    int num = atoi(c);
-    return num;
-}
 
 int main(int argc, char *argv[]) {
+    int turns = 0;
+    int player1xScore = 0;
+    int player2yScore = 0;
+    int resourceChanges[6] = {0};
 
     int num[argc-1];
     for (int i = 1; i < argc; i++)
         num[i] = ConvertToInt(argv[i]);
 
-    //std::cerr << num[1] << '-' << num[2];
-    
+    GameStatus status(player1xScore, player2yScore, turns, resourceChanges); 
+
     return 0;
 }
 
@@ -27,8 +24,15 @@ int main(int argc, char *argv[]) {
 
 //official main
 int main() {
+    int turns = 0;
+    int player1xScore = 0;
+    int player2yScore = 0;
+    int resourceChanges[6] = {0};
+
+    GameStatus status(player1xScore, player2yScore, turns, resourceChanges); 
 
     return 0;
 }
 
 #endif
+
