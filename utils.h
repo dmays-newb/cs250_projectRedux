@@ -30,4 +30,6 @@ int VariableMatch(T input, const T options[], int count);
 
 int CharInputAndCheck(const char options[], int count);
 
+void UpdateIntArray(const int input[], int updateThis[], int count);
+
 #endif // 

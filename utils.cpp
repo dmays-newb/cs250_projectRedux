@@ -154,4 +154,10 @@ int CharInputAndCheck(const char options[], int count) {
     return playerChoice;
 }
 
+void UpdateIntArray(const int input[], int updateThis[], int count) {
+    for (int i = 0; i < count; i++) {
+        updateThis[i] += input[i];
+    }
+        
+}
 
