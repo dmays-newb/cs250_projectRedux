@@ -12,18 +12,18 @@ void TradeForMessage() {
 }
 
 
-char ValidateChar(bool ThisIsPayment) {
-    char c[100];
-    bool valid = false;
-    while (valid == false) {
-        (ThisIsPayment) ? TradeOutMessage():TradeForMessage();
-        std::cin >> c;
-        std::cin.clear();
-        std::cin.ignore(100, '\n');
-        if (c[0] == 'b' || c[0] == 'h' || c[0] == 'o' || c[0] == 'x' 
-        || c[0] == 's'  ||  c[0] == 'w' && isspace(c[0]) == 0)
-            break;
-    }
-    return c[0];
-}
+// char ValidateChar(bool ThisIsPayment) {
+//     char c[100];
+//     bool valid = false;
+//     while (valid == false) {
+//         (ThisIsPayment) ? TradeOutMessage():TradeForMessage();
+//         std::cin >> c;
+//         std::cin.clear();
+//         std::cin.ignore(100, '\n');
+//         if (c[0] == 'b' || c[0] == 'h' || c[0] == 'o' || c[0] == 'x' 
+//         || c[0] == 's'  ||  c[0] == 'w' && isspace(c[0]) == 0)
+//             break;
+//     }
+//     return c[0];
+// }
 

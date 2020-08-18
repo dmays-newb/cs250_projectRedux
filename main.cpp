@@ -14,25 +14,35 @@
 
 int main(int argc, char *argv[]) {
     srand(time(NULL));
-    int turns = 1;
-    int player1xScore = 0;
-    int player2yScore = 0;
-    int resourceChanges[6] = {-3, 0, 1, 2, 3, 0};
+    int turns;
+    int player1xScore;
+    int player2yScore;
+    int resourceChanges[6];
     
-
+    //manage CLAs
     int num[argc-1];
     for (int i = 1; i < argc; i++)
         num[i] = ConvertToInt(argv[i]);
 
+    do {
+        turns = 1;
+        player1xScore = 0;
+        player2yScore = 0;
+
+        for (int i = 0; i < 6; i++) 
+            resourceChanges[i] = 0;
+
     GameStatus status(player1xScore, player2yScore, turns, resourceChanges); 
-    Board board;
     Player p1x;
     Player p2y;
+    Board board;
+
+    GameLoop(status, board, p1x, p2y);
+       
+
+    } while (PlayAgain());
 
     // Debug2File(turns, __LINE__);
-    // GameLoop(status, board, p1x, p2y);
-
-    char c = ValidateChar(0);
 
     return 0;
 }

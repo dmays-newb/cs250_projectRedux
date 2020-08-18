@@ -19,4 +19,15 @@ void InvalidEntry();
 
 void PrintNumRow(int n);
 
+template <class T>
+T GetInput(T var);
+
+template <class T>
+bool ValidRange(T input, T min, T max);
+
+template <class T>
+int VariableMatch(T input, const T options[], int count);
+
+int CharInputAndCheck(const char options[], int count);
+
 #endif // 

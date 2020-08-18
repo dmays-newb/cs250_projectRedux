@@ -12,6 +12,6 @@
     };
 
 
-    char ValidateChar(bool ThisIsPayment);
+    // char ValidateChar(bool ThisIsPayment);
 
 #endif // !PLAYER_H

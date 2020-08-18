@@ -6,4 +6,6 @@
 
 void GameLoop(GameStatus, Board, Player, Player);
 
+bool PlayAgain();
+
 #endif // !GAMELOOP_H

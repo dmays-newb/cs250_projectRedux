@@ -73,7 +73,18 @@ void Reset() {
 }
 
 void InvalidEntry() {
-    std::cout << "Invalid Entry" << std::endl;
+    std::cout << "Entry out of range. Try again: " << std::endl;
+}
+
+template <class T>
+void InvalidEntry(T options[], int count) {
+    std::cout << "Entry out of range."
+        << "\nTry again with one of these options: " << std::endl;
+
+    for (int i = 0; i < count; i++) {
+        std::cout << options[i] << ' ';
+    } 
+    
 }
 
 void PrintNumRow(int n) {       
@@ -84,3 +95,63 @@ void PrintNumRow(int n) {
     }
     std::cout << '\n' << std::endl;
 }
+
+
+template <class T>
+T GetInput(T var) {  
+    std::cout << std::flush;
+
+    // std::cerr << "Error output GetInput. Line: " 
+    //     << __LINE__ << std::endl;
+
+    if (std::cin >> var) 
+        return var;
+    else {
+        std::cin.clear();
+        std::cin.ignore(100, '\n');
+        std::cout << "Try again: " << std::endl;
+        return GetInput(var);
+    }
+}
+
+template <class T>
+bool ValidRange(T input, T min, T max) {
+    bool valid;
+    (!(min <= input <= max)) ? valid=false:valid=true;
+    return valid;
+}
+
+//Update the template for this
+template <class T>
+int VariableMatch(T input, const T options[], int count) {
+    T in = input;
+    // std::cerr << "Error output VariableMatch. "
+    //     << " Line: " << __LINE__ 
+    //     << " Input: " << input
+    //     << " Count: " << count << std::endl;
+    int attempts = 0;
+    while (attempts < 10) {
+
+        for (int i = 0; i < count; i++) {
+            if (in == options[i])
+                return i;
+        }
+    attempts++;
+    InvalidEntry(options, count);
+    in = GetInput(input);
+    }
+
+    return -1;
+}
+//Create/update this template for later use
+int CharInputAndCheck(const char options[], int count) {
+    char input;
+    int playerChoice;
+        input = GetInput(input);
+        playerChoice = VariableMatch(input, options, count);
+
+
+    return playerChoice;
+}
+
+

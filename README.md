@@ -30,7 +30,7 @@
 - Horizontal line
 - Screen reset (multiplatform)
 
-### 1.3: Validate char and int inputs --DONE Chars--
+### 1.3: Validate char and int inputs --DONE Chars Both--
 - Generic inputs
 - Debug out
 
@@ -41,7 +41,7 @@
 - Use Debug output
 
 ### 1.5: Official Outputs
-- Winning message
+- Winning message -- Doneish--
 - Score official output
 - Available Resources
 
