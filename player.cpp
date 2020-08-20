@@ -27,3 +27,4 @@ void TradeForMessage() {
 //     return c[0];
 // }
 
+     int* GetWages() { return wages ; }

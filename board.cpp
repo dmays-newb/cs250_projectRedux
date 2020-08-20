@@ -44,3 +44,30 @@ int ValidRow() {
     }
     return i;
 }
+
+
+#ifdef DEBUG_BOARD
+    void Board::DebugBoard(int var, int line) {
+        std::cerr << "File: " << __FILE__;
+        DebugOut(var, line);
+    }
+#else
+    void Board::DebugBoard(int var, int line) { var = 0; }
+#endif
+
+
+Board::Board(int &p1, int &p2, int &t, int rc[]) {
+    player1xScore = &p1;
+    player2yScore = &p2;
+    turns = &t;
+    resourceChanges = rc;
+
+    DebugBoard(*player1xScore, __LINE__);
+    DebugBoard(*player2yScore, __LINE__);
+    DebugBoard(*turns, __LINE__);
+    DebugBoard(resourceChanges[0], __LINE__);
+}
+
+bool EnoughResources(int rc[], int count) {
+    //Call 
+}

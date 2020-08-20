@@ -22,15 +22,24 @@ void DebugOut(std::ostream &file, int var, int line) {
            << var << std::endl;
 }
 
+void PrintLine(std::ostream &file, int n) {
+    file << std::setw(n) << std::setfill('-');
+    file << std::setw(0) << std::setfill(' ');
+}
+
+//Print line of n length
 void PrintLine(int n) {
     std::cout << '\n' << std::setw(n) << std::setfill('-') 
         << '\n';
     std::cout << std::setw(0) << std::setfill(' ');
 }
 
-void PrintLine(std::ostream &file, int n) {
-    file << std::setw(n) << std::setfill('-');
-    file << std::setw(0) << std::setfill(' ');
+//Print line of 30 length
+void PrintLine() {
+    int n = 30;
+    std::cout << '\n' << std::setw(n) << std::setfill('-') 
+        << '\n';
+    std::cout << std::setw(0) << std::setfill(' ');
 }
 
 int WhichPlayer(int turns) {

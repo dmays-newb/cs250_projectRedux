@@ -27,6 +27,7 @@ class GameStatus {
         void PrintTurns() { std::cout << *turns ; }
         bool GameOver();
         void WinningStatement();
+        void PrintScores();
 };
 
 #endif // !GAMESTATUS_H

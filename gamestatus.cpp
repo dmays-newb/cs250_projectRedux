@@ -30,6 +30,20 @@ bool GameStatus::GameOver() {
         return false;
 }
 
+void GameStatus::PrintScores() {
+    PrintLine(30);
+    
+    for (int i = 0; i < 2; i++) {
+        std::cout << "Player #" << i + 1 
+            << " score: ";
+        if (i == 0)
+            PrintScore1x();
+        else
+            PrintScore2y();
+        PrintLine();
+    }
+}
+
 void GameStatus::WinningStatement() {
     int winner;
     winner = WhichPlayer(*turns);

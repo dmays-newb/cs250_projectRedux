@@ -42,8 +42,7 @@
 
 ### 1.5: Official Outputs
 - Winning message -- Doneish--
-- Score official output
-- Available Resources
+- Score official output 
 
 ### 1.6: Action Choice
 - Action choice prompt
@@ -143,7 +142,10 @@
 - Resources (0)
 - Wages (0)
 
-### 3.1.1: Update wage and/or resource array (income, new building, etc.)
+#### 3.1.1: Print Resoruces
+- **Available Resources**
+
+### 3.1.2: Update wage and/or resource array (income, new building, etc.)
 - Use extra parameter to dictate: wage update (2), resource update (1), --> overload for trade pass two ints (out, in)
 - Take in resource change array or wages
 - Check turn to pick player

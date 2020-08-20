@@ -5,7 +5,11 @@ int ConvertToInt(char* c);
 
 void DebugOut(int var, int line);
 
+void PrintLine(std::ostream &file, int n);
+
 void PrintLine(int n);
+
+void PrintLine();
 
 int WhichPlayer(int turns);
 

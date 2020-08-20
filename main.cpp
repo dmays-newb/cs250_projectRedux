@@ -26,16 +26,18 @@ int main(int argc, char *argv[]) {
 
     do {
         turns = 1;
-        player1xScore = 0;
-        player2yScore = 0;
+        player1xScore = 1;
+        player2yScore = 2;
 
         for (int i = 0; i < 6; i++) 
             resourceChanges[i] = 0;
 
     GameStatus status(player1xScore, player2yScore, turns, resourceChanges); 
+    Board board(player1xScore, player2yScore, turns, resourceChanges);
     Player p1x;
     Player p2y;
-    Board board;
+
+    status.PrintScores();
 
     GameLoop(status, board, p1x, p2y);
        
