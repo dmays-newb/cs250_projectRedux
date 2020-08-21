@@ -71,6 +71,5 @@ int ActionChoice(int player) {
         VariableMatch(choice, options, 3);
 
     } while (choice <= 0 || choice >= 4);
-
      
 }

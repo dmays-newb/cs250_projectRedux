@@ -25,6 +25,38 @@ bool PlayAgain() {
         return false;
 }
 
+int RunTurn(int choice, Player &player) {
+
+    int endOfTurnAction = 0;
+    switch (choice)
+    {
+    case 1: //build
+        endOfTurnAction = RequestBuild(); //road =1; settle =2; invalid =0;
+        //if invalid -> restart loop without incrementing score or turn
+        break;
+    case 2: //trade
+        endOfTurnAction = RequestTrade(); //valid trade = 1; invalid = 0        
+        break;
+    default: //pass -- no change to endOfTurnAction
+        break;
+    }
+    return endOfTurnAction;
+}
+
+void EndOfTurnActions(int option, GameStatus &stats) {
+    switch (option)
+    {
+    case 1: //increment turns 
+        /* code */
+        break;
+    case 2: //increment turns and score
+        //code
+        break;
+    default: //no change -- restart turn
+        break;
+    }
+}
+
 void GameLoop() {
     int turns = 1;
     int player1xScore = 1;
@@ -32,19 +64,20 @@ void GameLoop() {
     int resourceChanges[5];
     int activePlayer = 1;
     int choice = 0;
+    int turnResult = 0;
 
     for (int i = 0; i < 5; i++) 
         resourceChanges[i] = 0;
 
     GameStatus stats(player1xScore, player2yScore, turns, resourceChanges); 
-    Player p1x(turns, resourceChanges);
-    Player p2y(turns, resourceChanges);
-    Board board(p1x, p2y, turns, resourceChanges);
+    Player player1(turns, resourceChanges);
+    Player player2(turns, resourceChanges);
+    Board board(player1, player2, turns, resourceChanges);
 
     // stats.PrintScores();
     // board.DebugBoard(-1, __LINE__);
 
-        // odd number of turns at end means p1x wins
+        // odd number of turns at end means player1 wins
         // even for player 2
     do {
         // for (int i = 0; i < 6; i++)
@@ -52,15 +85,12 @@ void GameLoop() {
         activePlayer = WhichPlayer(turns);
         choice = ActionChoice(activePlayer);
 
-        switch (choice)
-        {
-        case /* constant-expression */:
-            /* code */
-            break;
-        
-        default:
-            break;
-        }
+        if (activePlayer == 1)
+            turnResult = RunTurn(choice, player1);
+        else 
+            turnResult = RunTurn(choice, player2);
+
+        EndOfTurnActions(turnResult, stats);
         
 
         //Start with action choice
