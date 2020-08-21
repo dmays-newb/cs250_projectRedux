@@ -27,4 +27,15 @@ void TradeForMessage() {
 //     return c[0];
 // }
 
-     int* GetWages() { return wages ; }
+    //  int* GetWages() { return wages ; }
+
+Player::Player(int &t, int rc[]) {
+    turns = &t;
+    resourceChanges = rc;
+    
+    for (int i = 0; i < 5; i++) {
+        resources[i] = 0;
+        wages[i] = 0;
+    }
+    
+}

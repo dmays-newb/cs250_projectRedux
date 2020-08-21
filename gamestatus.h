@@ -30,4 +30,6 @@ class GameStatus {
         void PrintScores();
 };
 
+int ActionChoice(int player);
+
 #endif // !GAMESTATUS_H

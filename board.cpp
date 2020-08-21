@@ -1,5 +1,6 @@
 #include <iostream>
 #include "board.h"
+#include "utils.h"
 
 int ValidCol() {
     int i = -1;
@@ -56,14 +57,12 @@ int ValidRow() {
 #endif
 
 
-Board::Board(int &p1, int &p2, int &t, int rc[]) {
-    player1xScore = &p1;
-    player2yScore = &p2;
+Board::Board(Player &p1, Player &p2, int &t, int rc[]) {
+    playerOne = &p1;
+    playerTwo = &p2;
     turns = &t;
     resourceChanges = rc;
 
-    DebugBoard(*player1xScore, __LINE__);
-    DebugBoard(*player2yScore, __LINE__);
     DebugBoard(*turns, __LINE__);
     DebugBoard(resourceChanges[0], __LINE__);
 }

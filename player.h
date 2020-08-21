@@ -6,19 +6,19 @@
         private:
             int* turns;
             int* resourceChanges;
-            int resources[6];
-            int wages[6];
+            int resources[5];
+            int wages[5];
         public:
             Player(int &t, int rc[]);
             //bool tradeReq();
             //void UpdateWages();
             //void UpdateResources(); //use pre-existing array update tool(s)
-            int* GetResources() { return resources ; }
-            bool EnoughResources(/*Options here*/); //Use for trades, validating builds; 
+            // int* GetResources() { return resources ; }
+            // bool EnoughResources(/*Options here*/); //Use for trades, validating builds; 
             //use WhichPlayer() to determine which one..?
     };
 
-    int* GetWages();
+    // int* GetWages();
 
     // char ValidateChar(bool ThisIsPayment);
 
